@@ -3,7 +3,7 @@ import { fadeUp, staggerContainer } from '../../lib/animations';
 
 const skills = [
     "TypeScript", "React", "Node.js", "Astro", "Tailwind CSS",
-    "PostgreSQL", "Docker", "AWS", "System Design", "UI/UX"
+    "PostgreSQL", "Containerization", "Cloud", "System Design", "UI/UX", "Swift", "Kotlin"
 ];
 
 export default function About() {
@@ -23,15 +23,13 @@ export default function About() {
                         </h2>
                         <div className="space-y-6 text-text-secondary leading-relaxed">
                             <p>
-                                I am a software engineer with a passion for building tools that empower people.
-                                My journey began with a curiosity about how things work, which led me to dive deep into full-stack development.
+                                I am a founder-engineer who builds end-to-end products, not just features. My journey combines entrepreneurship, software engineering, and applied AI turning bold ideas into products that work.
                             </p>
                             <p>
-                                Over the years, I've worked on a diverse range of projects, from early-stage startups to large-scale enterprise systems.
-                                I believe in writing clean, maintainable code and designing intuitive user experiences.
+                                Beyond engineering, I’m deeply involved in business development and strategic partnerships with enterprises. I enjoy conversations where technology becomes leverage.
                             </p>
                             <p>
-                                When I'm not coding, you can find me exploring new technologies, contributing to open source, or enjoying a good cup of coffee.
+                                For me, building software isn’t only about product, it’s about ecosystems. Software is a tool that helps people, teams, and organizations operate at their best.
                             </p>
                         </div>
                     </motion.div>

@@ -15,20 +15,19 @@ export default function Contact() {
                         Let's Work Together
                     </h2>
                     <p className="text-lg text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
-                        I'm currently available for freelance projects and open to new opportunities.
-                        If you have a project in mind or just want to say hi, feel free to reach out.
+                        I’m always open to partnerships, collaboration, and opportunities to bring my platforms into new markets. If you’d like to explore whitelabel solutions or build something together, feel free to reach out.
                     </p>
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                         <a
-                            href="mailto:hello@example.com"
+                            href="mailto:hidayatabisena@gmail.com"
                             className="px-8 py-4 bg-black text-white rounded-full font-medium hover:bg-black/80 transition-colors duration-300 min-w-[200px]"
                         >
                             Email Me
                         </a>
                         <div className="flex gap-4">
                             <a
-                                href="#"
+                                href="https://github.com/hidayatabisena"
                                 className="p-4 bg-white border border-border rounded-full hover:border-text-primary transition-colors duration-300 text-text-secondary hover:text-text-primary"
                                 aria-label="GitHub"
                             >
@@ -37,7 +36,7 @@ export default function Contact() {
                                 </svg>
                             </a>
                             <a
-                                href="#"
+                                href="https://linkedin.com/in/hidayat-abisena"
                                 className="p-4 bg-white border border-border rounded-full hover:border-text-primary transition-colors duration-300 text-text-secondary hover:text-text-primary"
                                 aria-label="LinkedIn"
                             >

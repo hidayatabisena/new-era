@@ -3,27 +3,45 @@ import { fadeUp, staggerContainer } from '../../lib/animations';
 
 const projects = [
     {
-        title: "AI Content Generator",
-        description: "A powerful tool for generating marketing copy and blog posts using advanced LLMs.",
-        tech: ["Next.js", "OpenAI API", "Tailwind"],
+        title: "Multi-Tenant Operations Platform",
+        description:
+            "A SaaS platform for managing distributed field operations, tasks, and workflows across multiple organizations, with tenant-scoped data and role-based access.",
+        tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Prisma"],
         link: "#"
     },
     {
-        title: "E-commerce Dashboard",
-        description: "A comprehensive analytics dashboard for online retailers to track sales and inventory.",
-        tech: ["React", "Tremor", "Supabase"],
+        title: "Enterprise AI Workspace & Router",
+        description:
+            "A unified AI workspace that routes requests across multiple LLMs, adds guardrails, tracks usage, and enables private, ChatGPT-like environments for teams.",
+        tech: ["Node.js", "AdonisJS", "LLM Router", "Redis", "PostgreSQL"],
         link: "#"
     },
     {
-        title: "Task Management App",
-        description: "A collaborative task manager focusing on simplicity and team productivity.",
-        tech: ["Vue.js", "Firebase", "Pinia"],
+        title: "AI-Driven Procurement & Scoring",
+        description:
+            "An AI-assisted procurement flow that analyzes documents, summarizes proposals, and generates scoring insights to support decision-making for enterprise buyers.",
+        tech: ["TypeScript", "LLMs", "n8n", "PostgreSQL"],
         link: "#"
     },
     {
-        title: "Financial Portfolio Tracker",
-        description: "Real-time tracking of stocks and crypto assets with detailed performance metrics.",
-        tech: ["TypeScript", "D3.js", "Node.js"],
+        title: "Employee Onboarding AI Assistant",
+        description:
+            "A prototype onboarding assistant that turns SOPs and training material into quizzes, micro-lessons, and guided flows for new hires in their first week.",
+        tech: ["Astro", "React", "Tailwind", "Material UI"],
+        link: "#"
+    },
+    {
+        title: "AI-Augmented Sales & Pitch Generator",
+        description:
+            "A personal CRM and AI engine that transforms public company data into tailored pitch ideas, cold email angles, and deck outlines for different industries.",
+        tech: ["React", "Vite", "LLMs", "PostgreSQL"],
+        link: "#"
+    },
+    {
+        title: "Logging, Audit & Security Toolkit",
+        description:
+            "A logging and audit layer that enriches backend requests with metadata (IP, country, tenant, device), flags suspicious activity, and exposes data for dashboards.",
+        tech: ["Node.js", "Express", "Winston", "PM2"],
         link: "#"
     }
 ];
