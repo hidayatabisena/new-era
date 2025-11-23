@@ -12,7 +12,7 @@ export default function HeroPortrait() {
                 <motion.img
                     src="https://res.cloudinary.com/moyadev/image/upload/v1763883763/Moyadev/hansena_ypms0x.jpg"
                     alt="Hidayat Abisena"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-center opacity-80"
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.5 }}
                 />

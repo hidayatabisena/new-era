@@ -7,10 +7,10 @@ export default function HeroNameBackground() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
-                className="text-[18vw] leading-none font-bold text-black uppercase tracking-tighter whitespace-nowrap select-none"
+                className="text-[18vw] leading-none font-bold text-black uppercase whitespace-nowrap select-none -translate-y-[15%]"
                 style={{ fontFamily: 'var(--font-heading)' }}
             >
-                HIDAYAT ABISENA
+                ABISENA
             </motion.h1>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/80" />
             <div className="absolute inset-0 bg-radial-gradient from-transparent to-background/40" />
