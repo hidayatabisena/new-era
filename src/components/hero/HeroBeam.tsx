@@ -17,6 +17,7 @@ export default function HeroBeam() {
                 starWidth={20}
                 starHeight={2}
             />
+
             <ShootingStars
                 starColor="#333333"
                 trailColor="#333333"
@@ -27,6 +28,7 @@ export default function HeroBeam() {
                 starWidth={25}
                 starHeight={2}
             />
+
             <ShootingStars
                 starColor="#1a1a1a"
                 trailColor="#1a1a1a"
