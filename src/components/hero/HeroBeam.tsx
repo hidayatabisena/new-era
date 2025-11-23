@@ -1,33 +1,45 @@
-import { motion } from 'framer-motion';
+import { ShootingStars } from "../ui/shooting-stars";
 
 export default function HeroBeam() {
     return (
-        <div className="absolute inset-0 overflow-hidden pointer-events-none flex items-center justify-center z-0">
-            <motion.div
-                initial={{ opacity: 0, rotate: 0 }}
-                animate={{ opacity: 1, rotate: 360 }}
-                transition={{
-                    opacity: { duration: 1.5, ease: "easeOut" },
-                    rotate: { duration: 20, repeat: Infinity, ease: "linear" }
-                }}
-                className="w-[150vh] h-[150vh] opacity-50"
-                style={{
-                    background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 80deg, rgba(250, 204, 21, 0.15) 120deg, transparent 160deg, transparent 360deg)',
-                    filter: 'blur(60px)',
-                }}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+            {/* Background with stars */}
+            <div className="absolute inset-0">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.15)_0%,rgba(0,0,0,0)_80%)] opacity-0" />
+                {/* Removed static stars for cleaner look, or can add back if needed */}
+            </div>
+
+            {/* Multiple shooting star layers with different colors and speeds */}
+            {/* Multiple shooting star layers with different colors and speeds */}
+            <ShootingStars
+                starColor="#FACC15" // Yellow/Gold
+                trailColor="#FACC15" // Solid yellow trail for visibility
+                minSpeed={15}
+                maxSpeed={35}
+                minDelay={1000}
+                maxDelay={3000}
+                starWidth={20}
+                starHeight={2}
             />
-            <motion.div
-                initial={{ opacity: 0, rotate: 180 }}
-                animate={{ opacity: 1, rotate: 540 }}
-                transition={{
-                    opacity: { duration: 1.5, ease: "easeOut", delay: 0.5 },
-                    rotate: { duration: 25, repeat: Infinity, ease: "linear", repeatType: "loop" }
-                }}
-                className="absolute w-[120vh] h-[120vh] opacity-30"
-                style={{
-                    background: 'conic-gradient(from 180deg at 50% 50%, transparent 0deg, transparent 100deg, rgba(250, 204, 21, 0.2) 140deg, transparent 180deg, transparent 360deg)',
-                    filter: 'blur(40px)',
-                }}
+            <ShootingStars
+                starColor="#000000" // Black stars
+                trailColor="#000000" // Solid black trail
+                minSpeed={10}
+                maxSpeed={25}
+                minDelay={2000}
+                maxDelay={4000}
+                starWidth={25}
+                starHeight={2}
+            />
+            <ShootingStars
+                starColor="#FACC15"
+                trailColor="#FACC15"
+                minSpeed={20}
+                maxSpeed={40}
+                minDelay={1500}
+                maxDelay={3500}
+                starWidth={20}
+                starHeight={2}
             />
         </div>
     );
