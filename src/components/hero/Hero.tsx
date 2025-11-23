@@ -7,11 +7,11 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background"
+            className="relative min-h-screen w-full flex flex-col md:block items-center justify-center overflow-hidden bg-background pt-24 md:pt-0"
         >
             <HeroNameBackground />
             <HeroBeam />
-            <div className="relative z-10 w-full h-full flex items-center justify-center pt-20">
+            <div className="relative z-10 w-full md:h-full flex items-center justify-center md:pt-20 order-2 md:order-none">
                 <HeroPortrait />
             </div>
             <HeroTextBlock />

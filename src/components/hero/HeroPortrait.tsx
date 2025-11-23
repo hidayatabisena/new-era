@@ -6,7 +6,7 @@ export default function HeroPortrait() {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-            className="relative z-10 w-full max-w-md mx-auto mt-10 md:mt-0"
+            className="relative z-10 w-[80%] md:w-full max-w-md mx-auto my-8 md:my-0 md:mt-0"
         >
             <div className="relative aspect-[3/4] overflow-hidden rounded-lg grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group">
                 <motion.img

@@ -57,7 +57,7 @@ export default function NavBar() {
                                 }
                             }}
                             className={clsx(
-                                "relative px-5 py-2 rounded-full text-sm font-medium transition-colors duration-300",
+                                "relative px-3 py-1.5 md:px-5 md:py-2 rounded-full text-xs md:text-sm font-medium transition-colors duration-300",
                                 isActive ? "text-white" : "text-text-secondary hover:text-text-primary"
                             )}
                         >

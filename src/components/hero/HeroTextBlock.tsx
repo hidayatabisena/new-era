@@ -3,7 +3,7 @@ import { fadeUp } from '../../lib/animations';
 
 export default function HeroTextBlock() {
     return (
-        <div className="absolute inset-0 flex flex-col justify-end pb-20 md:pb-32 px-4 z-20 pointer-events-none">
+        <div className="relative md:absolute inset-0 flex flex-col justify-end pb-10 md:pb-32 px-4 z-20 pointer-events-none order-3 md:order-none w-full h-auto md:h-full">
             <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-end gap-8 md:gap-20">
 
                 <motion.div
@@ -36,7 +36,7 @@ export default function HeroTextBlock() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5, duration: 1 }}
-                className="absolute bottom-8 right-8 md:bottom-12 md:right-12 flex items-center gap-2 text-xs text-text-secondary/60 pointer-events-auto"
+                className="relative md:absolute mt-8 md:mt-0 bottom-8 right-8 md:bottom-12 md:right-12 flex items-center justify-center md:justify-start gap-2 text-xs text-text-secondary/60 pointer-events-auto w-full md:w-auto"
             >
                 <span>(Scroll down)</span>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
