@@ -57,23 +57,23 @@ export default function Clients() {
                                         className="mx-auto h-20 w-auto dark:invert opacity-70 hover:opacity-100 transition-opacity"
                                         src={logo.url}
                                         alt={`${logo.name} Logo`}
-                                        style={{ height: '40px' }}
+                                        style={{ height: '24px' }}
                                     />
                                 </div>
                             ))}
                         </InfiniteSlider>
 
-                        <div className="bg-gradient-to-r from-background to-transparent absolute inset-y-0 left-0 w-20 z-10"></div>
-                        <div className="bg-gradient-to-l from-background to-transparent absolute inset-y-0 right-0 w-20 z-10"></div>
+                        <div className="bg-linear-to-r from-background to-transparent absolute inset-y-0 left-0 w-24 z-10"></div>
+                        <div className="bg-linear-to-l from-background to-transparent absolute inset-y-0 right-0 w-24 z-10"></div>
                         <ProgressiveBlur
-                            className="pointer-events-none absolute left-0 top-0 h-full w-20"
+                            className="pointer-events-none absolute left-0 top-0 h-full w-36"
                             direction="left"
-                            blurIntensity={1}
+                            blurIntensity={1.6}
                         />
                         <ProgressiveBlur
-                            className="pointer-events-none absolute right-0 top-0 h-full w-20"
+                            className="pointer-events-none absolute right-0 top-0 h-full w-36"
                             direction="right"
-                            blurIntensity={1}
+                            blurIntensity={1.6}
                         />
                     </div>
                 </div>
