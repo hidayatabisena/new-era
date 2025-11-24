@@ -1,8 +1,8 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { motion, useMotionValue, animate, useMotionValueEvent } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { motion, useAnimationFrame } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import useMeasure from 'react-use-measure';
 
 type InfiniteSliderProps = {
@@ -28,44 +28,56 @@ export function InfiniteSlider({
     reverse = false,
     className,
 }: InfiniteSliderProps) {
-    const [currentDuration, setCurrentDuration] = useState(duration || 25);
     const [ref, { width, height }] = useMeasure();
-    const translation = useMotionValue(0);
     const [isHovered, setIsHovered] = useState(false);
-    const [key, setKey] = useState(0);
+    const translation = useRef(0);
+    const [x, setX] = useState(0);
+    const [y, setY] = useState(0);
 
-    useEffect(() => {
-        let newDuration = duration || 25;
-        if (speed) {
-            newDuration = (direction === 'horizontal' ? width : height) / speed;
-        }
+    // Calculate the current speed based on hover state and props
+    const getCurrentSpeed = () => {
+        const dimension = direction === 'horizontal' ? width : height;
+
+        if (dimension === 0) return 0;
+
+        let currentSpeed = speed || dimension / (duration || 25);
 
         if (isHovered) {
-            if (durationOnHover) {
-                newDuration = durationOnHover;
-            } else if (speedOnHover) {
-                newDuration = (direction === 'horizontal' ? width : height) / speedOnHover;
+            if (speedOnHover !== undefined) {
+                currentSpeed = speedOnHover;
+            } else if (durationOnHover !== undefined) {
+                currentSpeed = dimension / durationOnHover;
             }
         }
 
-        setCurrentDuration(newDuration);
-    }, [isHovered, duration, durationOnHover, speed, speedOnHover, width, height, direction]);
+        return reverse ? -currentSpeed : currentSpeed;
+    };
 
-    useEffect(() => {
-        const controls = animate(
-            translation,
-            [0, direction === 'horizontal' ? -width / 2 : -height / 2],
-            {
-                ease: 'linear',
-                duration: currentDuration,
-                repeat: Infinity,
-                repeatType: 'loop',
-                repeatDelay: 0,
-            }
-        );
+    useAnimationFrame((time, delta) => {
+        const dimension = direction === 'horizontal' ? width : height;
 
-        return controls.stop;
-    }, [translation, currentDuration, width, height, direction]);
+        if (dimension === 0) return;
+
+        const speed = getCurrentSpeed();
+        const distance = (speed * delta) / 1000;
+
+        translation.current -= distance;
+
+        // Reset position when we've scrolled past half the content
+        // This creates the seamless loop effect
+        const resetPoint = -(dimension / 2 + gap / 2);
+        if (translation.current < resetPoint) {
+            translation.current = translation.current % resetPoint;
+        } else if (translation.current > 0) {
+            translation.current = translation.current % resetPoint;
+        }
+
+        if (direction === 'horizontal') {
+            setX(translation.current);
+        } else {
+            setY(translation.current);
+        }
+    });
 
     return (
         <div
@@ -84,8 +96,8 @@ export function InfiniteSlider({
                 )}
                 style={{
                     gap: `${gap}px`,
-                    x: direction === 'horizontal' ? translation : 0,
-                    y: direction === 'vertical' ? translation : 0,
+                    x: direction === 'horizontal' ? x : 0,
+                    y: direction === 'vertical' ? y : 0,
                 }}
                 ref={ref}
             >
