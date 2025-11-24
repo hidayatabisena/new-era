@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { fadeUp } from '../../lib/animations';
+import FloatingScrollButton from '../ui/FloatingScrollButton';
 
 export default function HeroTextBlock() {
     return (
@@ -14,7 +15,7 @@ export default function HeroTextBlock() {
                     className="md:max-w-xs pointer-events-auto"
                 >
                     <p className="text-text-secondary text-sm md:text-base leading-relaxed">
-                        Hello, I’m Hidayat Abisena, a product-minded engineer based in Indonesia. I craft AI-powered tools and build small, reliable web apps that are easy to use and simple to maintain.
+                        Hello, I'm Hidayat Abisena, a product-minded engineer based in Indonesia. I craft AI-powered tools and build small, reliable web apps that are easy to use and simple to maintain.
                     </p>
                 </motion.div>
 
@@ -32,17 +33,7 @@ export default function HeroTextBlock() {
 
             </div>
 
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 1 }}
-                className="relative md:absolute mt-8 md:mt-0 bottom-8 right-8 md:bottom-12 md:right-12 flex items-center justify-center md:justify-start gap-2 text-xs text-text-secondary/60 pointer-events-auto w-full md:w-auto"
-            >
-                <span>(Scroll down)</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 5v14M19 12l-7 7-7-7" />
-                </svg>
-            </motion.div>
+            <FloatingScrollButton />
         </div>
     );
 }
