@@ -11,8 +11,8 @@ const logos = [
         url: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/microsoft.svg',
     },
     {
-        name: 'Nvidia',
-        url: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/nvidia-text.svg',
+        name: 'Gemini',
+        url: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/gemini.svg',
     },
     {
         name: 'OpenAI',
@@ -27,12 +27,16 @@ const logos = [
         url: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/huggingface.svg',
     },
     {
-        name: 'Midjourney',
-        url: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/midjourney.svg',
+        name: 'Claude',
+        url: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/claude.svg',
     },
     {
-        name: 'Vercel',
-        url: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/vercel.svg',
+        name: 'Grok',
+        url: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/grok.svg',
+    },
+    {
+        name: 'DeepSeek',
+        url: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/deepseek.svg',
     },
 ];
 

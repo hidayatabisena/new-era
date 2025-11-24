@@ -34,7 +34,6 @@ export function InfiniteSlider({
     const [x, setX] = useState(0);
     const [y, setY] = useState(0);
 
-    // Calculate the current speed based on hover state and props
     const getCurrentSpeed = () => {
         const dimension = direction === 'horizontal' ? width : height;
 
@@ -63,8 +62,6 @@ export function InfiniteSlider({
 
         translation.current -= distance;
 
-        // Reset position when we've scrolled past half the content
-        // This creates the seamless loop effect
         const resetPoint = -(dimension / 2 + gap / 2);
         if (translation.current < resetPoint) {
             translation.current = translation.current % resetPoint;
