@@ -1,4 +1,4 @@
-import { ShootingStars } from "../ui/shooting-stars";
+import { ShootingStars } from "../ui/ShootingStars";
 
 export default function HeroBeam() {
     return (
